@@ -18,12 +18,13 @@ body {
 
 .slider {
 	background-color: rgba(197, 177, 128, 0.8);
-	width: 650px;
-	height: 700px;
+	width: 60%;
+	height: 80%;
 	border-radius: 25px;
 	display: grid;
 	grid-template-rows: 6fr 1fr;
 	grid-template-columns: 1fr 1fr;
+	overflow: hidden;
 }
 
 .slide {
@@ -36,6 +37,11 @@ body {
 	grid-row-start: 1;
 	grid-row-end: 2;
 	overflow: hidden;
+}
+
+img {
+	width: auto;
+	height: 90%;
 }
 
 .controls {
@@ -52,7 +58,7 @@ body {
 	grid-column-end: 2;
 	grid-row-start: 2;
 	grid-row-end: 3;
-	font-size: 20px;
+	font-size: 1.7vw;
 }
 
 input {
@@ -62,11 +68,23 @@ input {
 
 input:checked + .slide {
 	display: flex;
+	animation: move 1s;
 }
 
 input:checked + .slide + .description {
 	display: block;
-	margin: auto 10px;
+	margin: auto 30px;
+	animation: move 1s;
+}
+
+@keyframes move {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
 
 label {
