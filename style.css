@@ -18,8 +18,8 @@ body {
 
 .slider {
 	background-color: rgba(197, 177, 128, 0.8);
-	width: 60%;
-	height: 80%;
+	width: 50%;
+	height: 70%;
 	border-radius: 25px;
 	display: grid;
 	grid-template-rows: 6fr 1fr;
@@ -58,7 +58,7 @@ img {
 	grid-column-end: 2;
 	grid-row-start: 2;
 	grid-row-end: 3;
-	font-size: 1.7vw;
+	font-size: 1.4vw;
 }
 
 input {
@@ -97,8 +97,8 @@ label {
 label span {
 	display: block;
 	background-color: #2b2314;
-	width: 24px;
-	height: 24px;
+	width: 1.5vw;
+	height: 2.1vh;
 	border-radius: 100%;
 }
 
