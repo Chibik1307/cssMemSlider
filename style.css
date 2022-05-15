@@ -78,7 +78,7 @@ label {
 
 label span {
 	display: block;
-	background-color: darkcyan;
+	background-color: #2b2314;
 	width: 24px;
 	height: 24px;
 	border-radius: 100%;
@@ -86,7 +86,27 @@ label span {
 
 label:hover span {
 	background-color: transparent;
-	border: 2px solid darkcyan;
+	border: 2px solid #2b2314;
 	width: 20px;
 	height: 20px;
+}
+
+#bullet-1:checked ~ .controls label[for$="1"] span {
+	background-color: rgba(90, 71, 30, 0.6);
+}
+
+#bullet-2:checked ~ .controls label[for$="2"] span {
+	background-color: rgba(90, 71, 30, 0.6);
+}
+
+#bullet-3:checked ~ .controls label[for$="3"] span {
+	background-color: rgba(90, 71, 30, 0.6);
+}
+
+#bullet-4:checked ~ .controls label[for$="4"] span {
+	background-color: rgba(90, 71, 30, 0.6);
+}
+
+#bullet-5:checked ~ .controls label[for$="5"] span {
+	background-color: rgba(90, 71, 30, 0.6);
 }
