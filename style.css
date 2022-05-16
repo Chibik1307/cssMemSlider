@@ -41,7 +41,9 @@ body {
 
 img {
 	width: auto;
-	height: 90%;
+	max-width: 95%;
+	height: auto;
+	max-height: 90%;
 }
 
 .controls {
@@ -68,13 +70,13 @@ input {
 
 input:checked + .slide {
 	display: flex;
-	animation: move 1s;
+	animation: move 1.25s;
 }
 
 input:checked + .slide + .description {
 	display: block;
 	margin: auto 30px;
-	animation: move 1s;
+	animation: move 1.25s;
 }
 
 @keyframes move {
@@ -97,8 +99,8 @@ label {
 label span {
 	display: block;
 	background-color: #2b2314;
-	width: 1.5vw;
-	height: 2.1vh;
+	width: 24px;
+	height: 24px;
 	border-radius: 100%;
 }
 
@@ -127,4 +129,64 @@ label:hover span {
 
 #bullet-5:checked ~ .controls label[for$="5"] span {
 	background-color: rgba(90, 71, 30, 0.6);
+}
+
+@media (max-width: 576px) {
+	.slider {
+		background-color: rgba(197, 177, 128, 0.8);
+		width: 95%;
+		height: 50%;
+		border-radius: 25px;
+		display: grid;
+		grid-template-rows: 5fr 1fr 1fr;
+		grid-template-columns: 100%;
+	}
+
+	.slide {
+		background-color: transparent;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 1;
+		grid-row-end: 2;
+		overflow: hidden;
+	}
+
+	img {
+		max-width: 95%;
+		max-height: 95%;
+		height: auto;
+	}
+
+	.controls {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		grid-column-start: 1;
+		grid-row-start: 2;
+	}
+
+	.description {
+		display: none;
+		text-align: start;
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 3;
+		grid-row-end: 4;
+		font-size: 30px;
+	}
+
+	label span {
+		display: block;
+		background-color: #2b2314;
+		width: 24px;
+		height: 24px;
+		border-radius: 100%;
+	}
+
+	label {
+		margin: 0 3%;
+	}
 }
